@@ -9,6 +9,11 @@ compose-demos
 Android JetpackCompose demonstrational screens on various topics
 
 
+- [ProfileScreen](app/src/main/kotlin/dev/tonycode/demos/jpcompose/ui/screens/profile/ProfileScreen.kt)
+
+<a href="docs/ProfileScreen.png"><img src="docs/ProfileScreen.png" width=480 /></a>
+
+
 ## License
 
 [MIT](LICENSE)
