@@ -3,6 +3,9 @@
 
     <string name="app_name">Compose demos</string>
 
+    <string name="courses">Courses</string>
+    <string name="profile">Profile</string>
+
     <string name="online">online</string>
     <string name="offline">offline</string>
 
