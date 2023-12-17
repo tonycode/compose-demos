@@ -9,27 +9,27 @@ import androidx.compose.runtime.Composable
 
 
 private val DarkColorPalette = darkColors(
-    primary = SilverPhoenix,
-    primaryVariant = GhostWhite,
-    secondary = Walrus,
-    onSecondary = GhostWhite,
-    secondaryVariant = Tamahagane,
-    background = PianoBlack,
-    onBackground = GhostWhite,
-    surface = Tamahagane,
-    onSurface = GhostWhite,
+    primary = Palette.SilverPhoenix,
+    primaryVariant = Palette.GhostWhite,
+    secondary = Palette.Walrus,
+    onSecondary = Palette.GhostWhite,
+    secondaryVariant = Palette.Tamahagane,
+    background = Palette.PianoBlack,
+    onBackground = Palette.GhostWhite,
+    surface = Palette.Tamahagane,
+    onSurface = Palette.GhostWhite,
 )
 
 private val LightColorPalette = lightColors(
-    primary = DepthOfNight,
-    primaryVariant = PianoBlack,
-    secondary = Walrus,
-    onSecondary = GhostWhite,
-    secondaryVariant = DiscoBall,
-    background = GhostWhite,
-    onBackground = PianoBlack,
-    surface = SilverPhoenix,
-    onSurface = PianoBlack,
+    primary = Palette.DepthOfNight,
+    primaryVariant = Palette.PianoBlack,
+    secondary = Palette.Walrus,
+    onSecondary = Palette.GhostWhite,
+    secondaryVariant = Palette.DiscoBall,
+    background = Palette.GhostWhite,
+    onBackground = Palette.PianoBlack,
+    surface = Palette.SilverPhoenix,
+    onSurface = Palette.PianoBlack,
 )
 
 
@@ -38,14 +38,8 @@ fun DemosAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
-    val colors = if (darkTheme) {
-        DarkColorPalette
-    } else {
-        LightColorPalette
-    }
-
     MaterialTheme(
-        colors = colors,
+        colors = if (darkTheme) DarkColorPalette else LightColorPalette,
         typography = Typography(),
         shapes = Shapes,
         content = content

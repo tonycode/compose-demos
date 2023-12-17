@@ -25,7 +25,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import dev.tonycode.demos.jpcompose.R
 import dev.tonycode.demos.jpcompose.ui.theme.DemosAppTheme
-import dev.tonycode.demos.jpcompose.ui.theme.Walrus
+import dev.tonycode.demos.jpcompose.ui.theme.Palette
 import dev.tonycode.demos.jpcompose.ui.util.LightDarkPreviews
 import dev.tonycode.demos.jpcompose.ui.util.RtlLocalePreview
 
@@ -45,7 +45,7 @@ fun CourseCard(
                 .data(course.coverUrl)
                 .crossfade(true)
                 .build(),
-            placeholder = ColorPainter(Walrus),
+            placeholder = ColorPainter(Palette.Walrus),
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize(),
@@ -55,7 +55,7 @@ fun CourseCard(
         Box(
             modifier = Modifier.fillMaxSize()
                 .background(
-                    Brush.verticalGradient(listOf(Color.Transparent, Color(0xFF303030)))
+                    Brush.verticalGradient(listOf(Color.Transparent, Palette.Oil))
                 ),
         )
 
