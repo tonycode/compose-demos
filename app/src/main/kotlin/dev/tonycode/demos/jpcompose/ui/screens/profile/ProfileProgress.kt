@@ -2,6 +2,7 @@ package dev.tonycode.demos.jpcompose.ui.screens.profile
 
 import androidx.annotation.FloatRange
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.height
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
@@ -46,7 +47,10 @@ fun ProfileProgress(
 @Composable
 fun PreviewProfileProgress() {
     DemosAppTheme {
-        Surface(color = MaterialTheme.colors.background) {
+        Surface(
+            modifier = Modifier.height(88.dp),
+            color = MaterialTheme.colors.background
+        ) {
             ProfileProgress(value = dummyProfile.achievements.progress)
         }
     }

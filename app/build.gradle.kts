@@ -114,6 +114,8 @@ dependencies {
     implementation(libs.kotlin.stdlib.jdk8)  // Use the Kotlin standard library
     implementation(libs.androidx.core.ktx)
 
+    implementation(libs.kotlinx.collections.immutable)
+
     //// UI
     implementation(libs.androidx.lifecycle)
     implementation(libs.androidx.activity.compose)
@@ -122,6 +124,7 @@ dependencies {
     implementation(libs.androidx.compose.material)
     implementation(libs.androidx.constraintLayout.compose)
 
+    implementation(libs.coil.compose)
     implementation(libs.tonycode.arcProgressView)
 
     //// Debug
