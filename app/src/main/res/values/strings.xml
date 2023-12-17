@@ -3,4 +3,15 @@
 
     <string name="app_name">Compose demos</string>
 
+    <string name="online">online</string>
+    <string name="offline">offline</string>
+
+    <string name="level">level</string>
+    <string name="points">points</string>
+
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+
+    <string name="publications">Publications</string>
+
 </resources>

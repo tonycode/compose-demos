@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="online">מקוון</string>
+    <string name="offline">לא מקוון</string>
+
+    <string name="level">רמה</string>
+    <string name="points">נקודות</string>
+
+    <string name="followers">עוקבים</string>
+    <string name="following">נרשם</string>
+
+    <string name="publications">פרסומים</string>
+
+</resources>
