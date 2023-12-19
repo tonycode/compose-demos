@@ -3,8 +3,8 @@ package dev.tonycode.demos.jpcompose.ui.screens.profile
 import androidx.annotation.FloatRange
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.height
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
@@ -21,8 +21,8 @@ fun ProfileProgress(
     @FloatRange(from = 0.0, to = 1.0) value: Double,
 ) {
 
-    val colorPrimary: Int = MaterialTheme.colors.primary.toArgb()
-    val colorSecondary: Int = MaterialTheme.colors.secondaryVariant.toArgb()
+    val colorForProgress: Int = MaterialTheme.colorScheme.primary.toArgb()
+    val colorForTrack: Int = MaterialTheme.colorScheme.onTertiary.toArgb()
 
     AndroidView(
         modifier = modifier.aspectRatio(1f),
@@ -32,9 +32,9 @@ fun ProfileProgress(
                 sweepAngle = (45 + 180 + 45).toFloat()
 
                 trackWidth = 8.dp.value
-                trackColor = colorSecondary
+                trackColor = colorForTrack
                 progressWidth = 8.dp.value
-                progressColor = colorPrimary
+                progressColor = colorForProgress
 
                 progress = value.toFloat()
             }
@@ -49,7 +49,7 @@ fun PreviewProfileProgress() {
     DemosAppTheme {
         Surface(
             modifier = Modifier.height(88.dp),
-            color = MaterialTheme.colors.background
+            color = MaterialTheme.colorScheme.background
         ) {
             ProfileProgress(value = dummyProfile.achievements.progress)
         }

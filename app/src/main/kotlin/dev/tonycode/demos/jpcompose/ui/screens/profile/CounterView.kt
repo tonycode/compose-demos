@@ -4,9 +4,9 @@ import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -34,17 +34,17 @@ fun CounterView(
     ) {
         Text(
             text = value.toString(),
-            style = MaterialTheme.typography.body1,
+            style = MaterialTheme.typography.bodyLarge,
             fontWeight = FontWeight.Medium,
-            color = MaterialTheme.colors.onBackground,
+            color = MaterialTheme.colorScheme.onBackground,
         )
 
         Spacer(Modifier.height(4.dp))
 
         Text(
             text = stringResource(id = titleRes),
-            style = MaterialTheme.typography.body1,
-            color = MaterialTheme.colors.secondary,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.secondary,
         )
     }
 }
@@ -54,7 +54,7 @@ fun CounterView(
 @Composable
 fun PreviewCounterView() {
     DemosAppTheme {
-        Surface(color = MaterialTheme.colors.background) {
+        Surface(color = MaterialTheme.colorScheme.background) {
             CounterView(
                 titleRes = R.string.followers,
                 value = dummyProfile.counters.followers,

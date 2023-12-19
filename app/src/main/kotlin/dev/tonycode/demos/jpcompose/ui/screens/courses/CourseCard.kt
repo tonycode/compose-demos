@@ -5,9 +5,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -68,8 +68,8 @@ fun CourseCard(
 
             Text(
                 text = course.title,
-                style = MaterialTheme.typography.body1,
-                color = MaterialTheme.colors.onSecondary,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSecondary,
                 modifier = Modifier.constrainAs(title) {
                     start.linkTo(parent.start, margin = 12.dp)
                     end.linkTo(lessons.start, margin = 8.dp)
@@ -80,8 +80,8 @@ fun CourseCard(
 
             Text(
                 text = course.lessons.toString() + " " + stringResource(R.string.lessons),
-                style = MaterialTheme.typography.body2,
-                color = MaterialTheme.colors.onSecondary,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSecondary,
                 modifier = Modifier.constrainAs(lessons) {
                     end.linkTo(parent.end, margin = 12.dp)
                     bottom.linkTo(parent.bottom, margin = 8.dp)
@@ -98,7 +98,7 @@ fun CourseCard(
 @Composable
 fun PreviewCourseCard() {
     DemosAppTheme {
-        Surface(color = MaterialTheme.colors.background) {
+        Surface(color = MaterialTheme.colorScheme.background) {
             CourseCard(
                 course = dummyCourses[0],
                 modifier = Modifier.fillMaxWidth()

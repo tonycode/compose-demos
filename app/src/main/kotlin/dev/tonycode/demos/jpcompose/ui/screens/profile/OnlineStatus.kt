@@ -8,9 +8,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -35,7 +35,7 @@ fun OnlineStatus(
     ) {
         // an indicator
         Surface(
-            modifier = Modifier.padding(top = 3.dp).size(10.dp),
+            modifier = Modifier.padding(top = 2.dp).size(10.dp),
             shape = CircleShape,
             color = if (isOnline) Color.Green else Color.Gray,
         ) { }
@@ -46,9 +46,9 @@ fun OnlineStatus(
             text = stringResource(
                 if (isOnline) R.string.online else R.string.offline
             ),
-            style = MaterialTheme.typography.body2,
-            color = if (isOnline) MaterialTheme.colors.primaryVariant
-                else MaterialTheme.colors.secondary,
+            style = MaterialTheme.typography.bodySmall,
+            color = if (isOnline) MaterialTheme.colorScheme.onBackground
+                else MaterialTheme.colorScheme.secondary,
         )
     }
 
@@ -59,7 +59,7 @@ fun OnlineStatus(
 @Composable
 fun PreviewOnlineStatus() {
     DemosAppTheme {
-        Surface(color = MaterialTheme.colors.background) {
+        Surface(color = MaterialTheme.colorScheme.background) {
             Column {
                 OnlineStatus(isOnline = true)
 

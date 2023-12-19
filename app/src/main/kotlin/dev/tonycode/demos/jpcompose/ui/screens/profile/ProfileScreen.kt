@@ -12,9 +12,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -45,7 +45,7 @@ fun ProfileScreen(
 
         Text(
             text = profile.displayName,
-            style = MaterialTheme.typography.h5,
+            style = MaterialTheme.typography.headlineSmall,
         )
 
         Spacer(Modifier.height(8.dp))
@@ -79,7 +79,7 @@ private fun AvatarWithProgress(profile: UserProfile) {
                 .size(64.dp)
                 .clip(CircleShape),
             contentScale = ContentScale.Crop,
-            colorFilter = ColorFilter.tint(MaterialTheme.colors.secondary)
+            colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.secondary)
         )
     }
 }
@@ -89,6 +89,7 @@ private fun LevelsBlock(profile: UserProfile) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically,
     ) {
         PointsView(
             titleRes = R.string.level,
@@ -155,7 +156,7 @@ private fun CountersBlock(profile: UserProfile) {
 @Composable
 private fun PreviewProfileScreen() {
     DemosAppTheme {
-        Surface(color = MaterialTheme.colors.background) {
+        Surface(color = MaterialTheme.colorScheme.background) {
             ProfileScreen(profile = dummyProfile)
         }
     }

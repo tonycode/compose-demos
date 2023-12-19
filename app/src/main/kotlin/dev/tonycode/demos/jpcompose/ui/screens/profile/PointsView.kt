@@ -4,9 +4,9 @@ import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.width
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -33,16 +33,16 @@ fun PointsView(
     ) {
         Text(
             text = value.toString(),
-            style = MaterialTheme.typography.body2,
-            color = valueColor ?: MaterialTheme.colors.primaryVariant,
+            style = MaterialTheme.typography.bodySmall,
+            color = valueColor ?: MaterialTheme.colorScheme.onBackground,
         )
 
-        Spacer(Modifier.width(6.dp))
+        Spacer(Modifier.width(4.dp))
 
         Text(
             text = stringResource(titleRes),
-            style = MaterialTheme.typography.body2,
-            color = MaterialTheme.colors.secondary
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.secondary
         )
     }
 
@@ -53,7 +53,7 @@ fun PointsView(
 @Composable
 fun PreviewPointsView() {
     DemosAppTheme {
-        Surface(color = MaterialTheme.colors.background) {
+        Surface(color = MaterialTheme.colorScheme.background) {
             PointsView(
                 titleRes = R.string.level,
                 value = dummyProfile.achievements.level,
